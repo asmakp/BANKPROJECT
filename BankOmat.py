@@ -1,4 +1,5 @@
 # This is the bank account program with following function                      Date:2020/09/25
+
 import json
 
 from datetime import datetime, timedelta
@@ -95,11 +96,12 @@ def transaction(KontoNum):
     if  data[KontoNum]["trx"] == []:
         print("\nNo transaction to show\n")
     else:
+        print(f" DATE\t\tAMOUNT \t Account ={ KontoNum}")
         for d,t in zip(data[KontoNum]["date"],data[KontoNum]["trx"]):
-            print(f'Date: {d} -->{ t} Kr')
+            print(f'{d} -->{ t} Kr')
 
 def menuB(kontoNum):
-       
+           
     while True:
         
         try:
